@@ -1,0 +1,13 @@
+<div class="exams-container">
+  <app-exam-header [itemCount]="exams().length" (organizing)="addNewItem()"></app-exam-header>
+
+  <!-- Add new examen -->
+  @if(showForm()) {
+  <app-add-exam-form (newExam)="onSubmit($event)"></app-add-exam-form>
+  }
+
+  <!-- List of examens -->
+  @for(exam of exams(); track exam.id) {
+  <app-exam-item [exam]="exam"></app-exam-item>
+  }
+</div>

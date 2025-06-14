@@ -1,0 +1,26 @@
+  <div class="exams-card">
+    <app-brand-text
+      [label]="exam().student | username"
+      icon="person"
+    ></app-brand-text>
+
+    <app-brand-text
+      [label]="exam().meeting_point"
+      icon="location_on"
+    ></app-brand-text>
+
+    <app-brand-text
+      [label]="exam().date | date : 'd MMMM'"
+      icon="calendar_month"
+    ></app-brand-text>
+
+    <app-brand-text
+      [label]="exam().date | date : 'H'"
+      icon="schedule"
+      type="date"
+    ></app-brand-text>
+
+    <div class="status">
+      <span class="badge" [examStaus]="exam().status!"></span>
+    </div>
+  </div>

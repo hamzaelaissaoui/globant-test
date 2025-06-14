@@ -1,0 +1,13 @@
+<div class="bt">
+  <mat-icon class="bt-default">{{icon()}}</mat-icon>
+  <div [ngClass]="[label() ? 'bt-label' : 'bt-default label']">
+    @if(!label()) {
+      En attente
+    }
+    @else if(type() === 'date') {
+      {{ label() }} H
+    } @else {
+      {{ label() }}
+    }
+  </div>
+</div>

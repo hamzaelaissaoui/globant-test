@@ -1,0 +1,25 @@
+.exam-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  flex-wrap: wrap;
+
+  & input,
+  & select {
+    margin: 4px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  .form-actions {
+    display: flex;
+    gap: 8px;
+  }
+}

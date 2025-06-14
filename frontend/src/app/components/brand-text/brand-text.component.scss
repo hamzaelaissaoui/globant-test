@@ -1,0 +1,23 @@
+:host {
+    flex: 1;
+}
+
+.bt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+
+  &-default {
+    color: gray;
+    font-weight: 400;
+
+    &.label {
+      font-style: italic;
+    }
+  }
+
+  &-label {
+    font-weight: 700;
+    color: #000000;  }
+}

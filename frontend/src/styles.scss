@@ -1,0 +1,61 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  padding: 1.5rem;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+
+  &-add {
+    margin-top: 16px;
+    background: #ff5200;
+    color: white;
+  }
+
+  &-save {
+    background: #00a97f;
+    color: white;
+  }
+
+  &-cancel {
+    background: #707070;
+    color: white;
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red !important;
+}
+
+.error {
+  color: red;
+  font-size: 0.7rem;
+  margin-left: 6px;
+}

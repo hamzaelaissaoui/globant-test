@@ -1,0 +1,51 @@
+  <form [formGroup]="newExamForm" (ngSubmit)="onSubmit()">
+    <div class="exam-form">
+      <div>
+        <input
+          type="text"
+          formControlName="first_name"
+          placeholder="Prénom..."
+        />
+        @if(newExamForm.get('first_name')?.touched &&
+        newExamForm.get('first_name')?.hasError('required')) {
+        <div class="error">Le prénom est requis</div>
+        }
+      </div>
+
+      <div>
+        <input type="text" formControlName="last_name" placeholder="Nom..." />
+        @if(newExamForm.get('last_name')?.touched &&
+        newExamForm.get('last_name')?.hasError('required')) {
+        <div class="error">Le nom est requis</div>
+        }
+      </div>
+
+      <input
+        type="text"
+        formControlName="meeting_point"
+        placeholder="Point de rencontre..."
+      />
+
+      <input type="datetime-local" formControlName="date" />
+
+      <select formControlName="status">
+        <option value="0">A organiser</option>
+        <option value="1">Annulé</option>
+        <option value="2">Recherche de place</option>
+        <option value="3">Confirmé</option>
+      </select>
+
+      <div class="form-actions">
+        <button
+          type="submit"
+          class="btn btn-save"
+          [disabled]="newExamForm.invalid"
+        >
+          Valider
+        </button>
+        <button type="button" class="btn btn-cancel" (click)="onCancel()">
+          Annuler
+        </button>
+      </div>
+    </div>
+  </form>
